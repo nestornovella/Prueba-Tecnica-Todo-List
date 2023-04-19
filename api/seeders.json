@@ -1,0 +1,248 @@
+[
+    {
+        "nombre": "Comprar leche",
+        "descripcion": "Comprar leche en el supermercado",
+        "prioridad": "alta",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Pagar la factura de luz",
+        "descripcion": "Pagar la factura de luz antes de la fecha de vencimiento",
+        "prioridad": "media",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Llamar al mecánico",
+        "descripcion": "Llamar al mecánico para pedir una cita",
+        "prioridad": "baja",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Hacer ejercicio",
+        "descripcion": "Ir al gimnasio y hacer ejercicio durante 1 hora",
+        "prioridad": "alta",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Estudiar para el examen",
+        "descripcion": "Repasar los apuntes y hacer ejercicios para el examen",
+        "prioridad": "alta",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Limpiar la cocina",
+        "descripcion": "Limpiar la cocina y lavar los platos",
+        "prioridad": "media",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Hacer la compra",
+        "descripcion": "Ir al supermercado y comprar la lista de la compra",
+        "prioridad": "media",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Organizar el armario",
+        "descripcion": "Sacar la ropa que no se usa y organizar el armario",
+        "prioridad": "baja",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Leer un libro",
+        "descripcion": "Leer el libro que compré la semana pasada",
+        "prioridad": "baja",
+        "estado": "finalizada"
+    },
+    {
+        "nombre": "Llamar a mi amigo",
+        "descripcion": "Llamar a mi amigo para saludarlo",
+        "prioridad": "baja",
+        "estado": "finalizada"
+    },
+    {
+        "nombre": "Hacer la cama",
+        "descripcion": "Arreglar la cama y cambiar las sábanas",
+        "prioridad": "media",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Cocinar cena",
+        "descripcion": "Preparar la cena para esta noche",
+        "prioridad": "alta",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Enviar correo electrónico",
+        "descripcion": "Enviar un correo electrónico de seguimiento a un cliente",
+        "prioridad": "media",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Comprar regalo de cumpleaños",
+        "descripcion": "Comprar un regalo para el cumpleaños de mi hermano",
+        "prioridad": "media",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Hacer una llamada importante",
+        "descripcion": "Llamar al abogado para tratar un asunto legal",
+        "prioridad": "alta",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Hacer la declaración de impuestos",
+        "descripcion": "Revisar y enviar la declaración de impuestos antes de la fecha límite",
+        "prioridad": "alta",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Hacer una lista de tareas para el fin de semana",
+        "descripcion": "Hacer una lista de tareas y actividades para el fin de semana",
+        "prioridad": "baja",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Organizar una reunión con amigos",
+        "descripcion": "Organizar una cena con amigos en casa",
+        "prioridad": "media",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Ir al dentista",
+        "descripcion": "Ir al dentista para una revisión dental",
+        "prioridad": "alta",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Ir al cine",
+        "descripcion": "Ver la película que se estrena esta semana",
+        "prioridad": "baja",
+        "estado": "finalizada"
+    },
+    {
+        "nombre": "Comprar un nuevo ordenador",
+        "descripcion": "Investigar y comprar un nuevo ordenador para trabajar",
+        "prioridad": "alta",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Cocinar una cena especial",
+        "descripcion": "Cocinar una cena especial para mi pareja",
+        "prioridad": "media",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Renovar la matrícula del coche",
+        "descripcion": "Renovar la matrícula del coche antes de que venza",
+        "prioridad": "alta",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Llamar al banco",
+        "descripcion": "Llamar al banco para solicitar un préstamo",
+        "prioridad": "alta",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Pasar la aspiradora en casa",
+        "descripcion": "Pasar la aspiradora y limpiar el polvo en casa",
+        "prioridad": "media",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Aprender un nuevo idioma",
+        "descripcion": "Empezar a aprender un nuevo idioma en línea",
+        "prioridad": "baja",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Comprar billetes de avión",
+        "descripcion": "Comprar billetes de avión para las vacaciones de verano",
+        "prioridad": "alta",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Comprar ingredientes para cocinar cena especial",
+        "descripcion": "Comprar ingredientes para cocinar una cena especial para el aniversario de bodas",
+        "prioridad": "alta",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Sacar al perro a pasear",
+        "descripcion": "Sacar al perro a pasear durante media hora",
+        "prioridad": "media",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Hacer la declaración de impuestos",
+        "descripcion": "Hacer la declaración de impuestos antes de la fecha límite",
+        "prioridad": "alta",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Ir al supermercado",
+        "descripcion": "Comprar frutas, verduras y carne para la semana",
+        "prioridad": "media",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Llamar al banco",
+        "descripcion": "Llamar al banco para resolver un problema con la cuenta",
+        "prioridad": "alta",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Preparar la presentación",
+        "descripcion": "Preparar la presentación para la reunión del jueves",
+        "prioridad": "alta",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Limpiar el baño",
+        "descripcion": "Limpiar el baño y lavar las toallas",
+        "prioridad": "media",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Pasar la aspiradora",
+        "descripcion": "Pasar la aspiradora en la sala y las habitaciones",
+        "prioridad": "baja",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Leer un artículo",
+        "descripcion": "Leer un artículo sobre tecnología",
+        "prioridad": "baja",
+        "estado": "finalizada"
+    },
+    {
+        "nombre": "Hacer una llamada a mi abuela",
+        "descripcion": "Hacer una llamada a mi abuela para preguntar cómo está",
+        "prioridad": "baja",
+        "estado": "finalizada"
+    },
+    {
+        "nombre": "Comprar regalo de cumpleaños",
+        "descripcion": "Comprar un regalo de cumpleaños para mi mejor amigo",
+        "prioridad": "media",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Hacer una reserva en un restaurante",
+        "descripcion": "Hacer una reserva en un restaurante para la cena de mañana",
+        "prioridad": "alta",
+        "estado": "nueva"
+    },
+    {
+        "nombre": "Comprar un boleto de avión",
+        "descripcion": "Comprar un boleto de avión para el viaje de negocios la próxima semana",
+        "prioridad": "alta",
+        "estado": "en proceso"
+    },
+    {
+        "nombre": "Renovar el seguro del coche",
+        "descripcion": "Renovar el seguro del coche antes de la fecha de vencimiento",
+        "prioridad": "media",
+        "estado": "finalizada"
+    }
+]

@@ -10,6 +10,9 @@ module.exports = (sequelizeInstance)=>{
             defaultValue: UUIDV4,
             primaryKey:true
         },
+        descripcion:{
+            type:DataTypes.TEXT,
+        },
         nombre:{
             type: DataTypes.STRING,
             allowNull:false,
