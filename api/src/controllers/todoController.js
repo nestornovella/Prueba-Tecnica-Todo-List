@@ -36,7 +36,9 @@ module.exports = {
     getTodo: async (req, res) => {
 
         try {
-            const todos = await Todo.findAll()
+            const todos = await Todo.findAll({order:  [
+                ['id', 'ASC']
+              ]})
           
             todos.length>0
                 ? res.status(200).json({ estado: 'procesado', todos })
@@ -48,15 +50,16 @@ module.exports = {
     },
     deleteTodo: async (req, res) => {
 
-        const { id, all } = req.body
+        const { id, all } = req.query
+        const numId = parseInt(id)
 
         try {
             if (!id) { throwError('falta parametro id') }
 
-            const deleted = Todo.destroy({ where: { id }, truncate: !all ? false : true })
+            const deleted = Todo.destroy({ where: { id:numId }, truncate: !all ? false : true })
 
-            deleted.length
-                ? res.status(202).json({ estado: 'eliminado', response: `la tarea se ha eliminado satisfactoriamente id: ${id}` })
+            deleted
+                ? res.status(200).json({ estado: 'eliminado', response: `la tarea se ha eliminado satisfactoriamente id: ${id}` })
                 : throwError('no se pudo eliminar la tarea')
 
         } catch (error) {

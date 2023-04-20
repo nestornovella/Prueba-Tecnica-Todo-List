@@ -1,0 +1,74 @@
+
+.mainContainer{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.928);    
+    padding: 50px 0 50px 0;
+    color: white;
+    font-family: sans-serif;
+}
+
+.secondContainer{
+    display: flex;
+    align-items: center;
+}
+
+.secondContainer button{
+    width: 150px;
+    height: 150px;
+    background: url('../assets/borado.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 9px;
+}
+
+.firstContainer input{
+    width: 200px;
+    margin-top: 10px;
+    background-color: transparent;
+    color: white;
+    font-family: sans-serif;
+    height: 20px;
+    outline: none;
+    border: none;
+    border-bottom: solid 1px white;
+}
+
+.firstContainer select{
+    width: 80px;
+    margin-right: 40px;
+    background-color: transparent;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    
+}
+.firstContainer select option{
+    background-color: rgb(166, 164, 164);
+    color: white;
+    
+}
+
+.firstContainer textarea{
+    margin-top: 15px;
+    background-color: rgba(11, 19, 69, 0.452);
+    border: none;
+    outline: none;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+.firstContainer button{
+    background: url('../assets/addTask.png');
+    background-position: center;
+    background-size: cover;
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    margin:8% 35%;
+
+    
+}

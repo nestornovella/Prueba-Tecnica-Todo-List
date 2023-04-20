@@ -3,27 +3,43 @@ import { Route, Switch } from 'react-router-dom';
 import NavBar from './components/navbar';
 import TodoList from './components/todosList';
 import TodoForm from './components/todoForm';
-import useApi from './hooks/useApi';
-import axios from 'axios';
 import TodoRender from './components/todoRender';
+import { useAppContext } from './components/appProvider';
+import { getData } from './hooks/useApi';
+
 
 
 function App() {
   
-  const [apiData, setApiData] = useState([])
-  
+  const { todos, dispatch } = useAppContext()
+ 
 
-  const { data } = useApi('http://localhost:3001')
-  useEffect(()=>{
-    setApiData(data)
-  }, [data])
+  
+  useEffect(  ()=>{
+   getData().then(response =>
+    dispatch({
+      type:'ADD_DATA',
+      payload: response
+    })
+    
+    )
+  }, [])
+  
+  console.log(todos)
+
+  function changePriority(data){
+    setPriority(data)
+  }
+
+  
 
 
   return (
+    
     <div>
       <Route path={"/"}><NavBar/></Route>
       <Switch>
-        <Route exact path={"/"}><TodoList/><TodoRender todosData={apiData}/></Route>
+        <Route exact path={"/"}><TodoList/><TodoRender todosData={todos} /></Route>
         <Route exact path={"/form"}><TodoForm/></Route>
       </Switch>
     </div>

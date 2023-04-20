@@ -1,13 +1,13 @@
-const { DataTypes, UUIDV4 } = require('sequelize')
+const { DataTypes } = require('sequelize')
 
 
 module.exports = (sequelizeInstance)=>{
 
     sequelizeInstance.define('Todo', {
         id:{
-            type: DataTypes.UUID,
+            type: DataTypes.INTEGER,
             allowNull:false,
-            defaultValue: UUIDV4,
+            autoIncrement:true,
             primaryKey:true
         },
         descripcion:{
@@ -24,9 +24,10 @@ module.exports = (sequelizeInstance)=>{
 
         },
         estado:{
-            type:DataTypes.ENUM('nueva', 'en proceso', 'finalizada')
+            type:DataTypes.ENUM('nueva', 'en proceso', 'finalizada'),
+            defaultValue: 'nueva'
         }
-    }, {timestamps:false})
+    }, {timestamps:true})
 
 
 }

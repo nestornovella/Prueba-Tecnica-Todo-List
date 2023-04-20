@@ -1,21 +1,34 @@
 import axios from 'axios'
-import { useEffect, useState } from 'react'
+
+const url = 'http://localhost:3001'
 
 
 
-function useApi (url){
+export async function getData (){
 
-    const [data, setData] = useState([])
-
-    useEffect(()=>{
-            axios.get(url)
-            .then(response => setData(response.data.todos))
-    },[url])
-
-    if(data){
-        return {data, setData}
-    }
+    const response = await axios.get(url)
+    return response.data.todos
 
 }
 
-export default useApi
+
+export async function refresh (){
+    const data = await getData()
+    return data
+}
+
+
+export async function update(object){
+    return await axios.put(url, object)
+}
+
+export async function deleteTodo (id, all=false){
+    return await axios.delete(url, {id, all})
+}
+
+export async function createTodo (todo){
+    const response = await axios.post(url, todo)
+    console.log(response)
+    return response
+}
+ 

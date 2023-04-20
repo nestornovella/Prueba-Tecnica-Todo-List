@@ -6,6 +6,9 @@
     height: 50px;
     border: none;
     outline: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
 
     
 }
@@ -42,7 +45,7 @@ button:hover{
     padding: 5px;
     border-radius: 8px;
     outline: none;
-    background-color: rgba(0, 0, 0, 0.337);    
+    background-color:rgba(0, 0, 0, 0.337);    
     color: white;
     border: none;
     height: 20px;
@@ -62,9 +65,30 @@ button:hover{
     
 }
 
-
-
 .title{
     color: white;
     font-family: sans-serif;
+}
+
+.forbiden{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform: translateX(100%);
+    right: 0;
+    top: 70px;
+    width: 600px;
+    transition: 1s;
+
+}
+
+.visible{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform: translateX(0px);
+    right: 0;
+    top: 70px;
+    width: 600px;
+    transition: 1s;
 }
