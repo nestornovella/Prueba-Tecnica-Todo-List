@@ -1,6 +1,10 @@
 import axios from 'axios'
 
-const url = 'https://prueba-tecnica-todo-list-production.up.railway.app/'//'http://localhost:3001'
+// si se quiere ejecutar en local se necesita levantar el servidor
+
+    const url = 'https://prueba-tecnica-todo-list-production.up.railway.app/'
+//  const url = 'http://localhost:3001'
+
 
 
 
