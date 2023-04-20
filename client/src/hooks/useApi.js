@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = 'prueba-tecnica-todo-list-production.up.railway.app'//'http://localhost:3001'
+const url = 'https://prueba-tecnica-todo-list-production.up.railway.app/'//'http://localhost:3001'
 
 
 
