@@ -34,19 +34,16 @@ function TodoForm({forbidenForm}) {
     async function submit(e) {
         console.log("se ejecuta")
         e.preventDefault()
-
-
-        Object.keys(errors).length && setErrors({sendError:"necesitas ingresar titulo y descripción!⚠️"})
-        
+        Object.keys(errors).length && setErrors({sendError:"necesitas ingresar titulo y descripción!⚠️"}) 
         if(!Object.keys(errors).length){
-            createTodo(input).then(response =>{
+            await createTodo(input)
                 setInput({
                     nombre: "",
                     estado: "nueva",
                     prioridad: "media",
                     descripcion: ""
                 })
-            })        
+                  
             dispatch({
                 type: 'ADD_DATA',
                 payload: await refresh()
