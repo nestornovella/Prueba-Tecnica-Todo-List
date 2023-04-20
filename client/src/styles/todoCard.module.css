@@ -1,6 +1,5 @@
-
-
-.mainContainer{
+.mainContainer {
+    position: relative;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -10,10 +9,11 @@
     height: 180px;
     font-family: sans-serif;
     border-radius: 10px;
-    
+    z-index: 0;
+
 }
 
-.mainContainer select{
+.mainContainer select {
     outline: none;
     border: none;
     margin-right: 15px;
@@ -22,13 +22,13 @@
 }
 
 
-.titleContainer{
+.titleContainer {
     display: flex;
     justify-content: space-between;
     padding: 0px 10px 0px 10px;
 }
 
-.titleContainer button{
+.titleContainer button {
     width: 25px;
     height: 25px;
     border: none;
@@ -37,23 +37,45 @@
     margin-right: 10px;
 }
 
-.titleContainer button:hover{
+.titleContainer button:hover {
     background-color: rgba(255, 0, 0, 0.402);
 }
 
-.selectContainer{
+.selectContainer {
     display: flex;
 
 }
 
-.descContainer{
+.descContainer {
     padding: 0px 10px 0px 10px;
 
 }
+
 .descContainer p {
     font-size: 12px;
 }
 
-.descContainer h5{
+.descContainer h5 {
     margin-bottom: 5px;
+}
+
+.descContainer button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    border: none;
+}
+
+.priorityRed{
+    background-color: rgba(255, 0, 0, 0.294);
+}
+.priorityYellow{
+    background-color: rgba(255, 255, 0, 0.249);
+}
+.priorityGreen{
+    background-color: rgba(0, 128, 0, 0.229);
 }

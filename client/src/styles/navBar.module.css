@@ -9,7 +9,7 @@
     position: fixed;
     top: 0;
     width: 100vw;
-
+    z-index: 100;
     
 }
 
@@ -18,9 +18,7 @@ button:hover{
     cursor: pointer;
 }
 
-.searchContainer{
-    display: flex;
-}
+
 
 .selectContainer select{
     margin-right: 30px;
@@ -35,6 +33,7 @@ button:hover{
 }
 .searchContainer{
     display: flex;
+    position: relative;
   
     
 
@@ -56,13 +55,25 @@ button:hover{
     width: 28px;
     height: 28px;
     margin-top: 3px;
-    right: 5%;
+    right: -50px;
     background: url('../assets/mas.png') ;
     background-position: center;
     background-size: cover;
     border-radius: 8px;
     border: none;
     
+}
+
+.searchContainer :first-child{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 5px;
+    top: 3px;
+    background: url('../assets/search.png') ;
+    background-position: center;
+    background-size: cover;
+    z-index: 555;
 }
 
 .title{

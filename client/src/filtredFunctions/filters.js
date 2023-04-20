@@ -47,3 +47,14 @@ export const filterByState = async (priority)=>{
     }
 
 }
+
+
+
+export const searchTodo = async (input)=>{
+
+    const data = await getData(url)
+
+    const serchedData = data.filter(todo => todo.nombre.toLowerCase().includes(input.toLowerCase()))
+    
+    return serchedData
+}

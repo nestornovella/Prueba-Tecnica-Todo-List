@@ -23,7 +23,11 @@ export async function update(object){
 }
 
 export async function deleteTodo (id, all=false){
-    return await axios.delete(url, {id, all})
+    return await axios.delete(`${url}/?id=${id}&all=${all}` )
+}
+
+export async function deleteTodoCard (id){
+    return await axios.delete(`${url}/?id=${id}` )
 }
 
 export async function createTodo (todo){

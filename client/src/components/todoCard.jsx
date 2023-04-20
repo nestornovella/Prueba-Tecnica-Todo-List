@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import Styles from '../styles/todoCard.module.css'
 
 import axios from 'axios';
-import { deleteTodo, getData, refresh, update } from '../hooks/useApi';
+import { deleteTodoCard, refresh, update } from '../hooks/useApi';
 import { useAppContext } from './appProvider';
 
 function TodoCard({ nombre, descripcion, prioridad, estado, id }) {
@@ -11,22 +11,22 @@ function TodoCard({ nombre, descripcion, prioridad, estado, id }) {
 
     async function handlePriority(e) {
         e.preventDefault()
-        await update({id,[e.target.name]: e.target.value})
-       
+        await update({ id, [e.target.name]: e.target.value })
+
         dispatch({
             type: "ADD_DATA",
-            payload:  await refresh()
+            payload: await refresh()
         })
         console.log(e.target)
 
     }
 
-   async function deleteCard (){
+    async function deleteCard() {
         console.log(id)
-        const response = await axios.delete(`http://localhost:3001/?id=${id}`)
+        await deleteTodoCard(id)
         dispatch({
-            type:'ADD_DATA',
-            payload:await refresh()
+            type: 'ADD_DATA',
+            payload: await refresh()
         })
     }
 
@@ -54,6 +54,7 @@ function TodoCard({ nombre, descripcion, prioridad, estado, id }) {
                 <p>
                     {descripcion}
                 </p>
+                <button className={estado=== 'nueva' ? Styles.priorityGreen : estado === 'en proceso' ? Styles.priorityYellow : Styles.priorityRed }></button>
             </div>
         </div>
     );

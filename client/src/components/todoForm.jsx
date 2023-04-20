@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import Styles from '../styles/todoForm.module.css'
-import { createTodo, refresh } from '../hooks/useApi'
+import { createTodo, deleteTodo, refresh } from '../hooks/useApi'
 import { useAppContext } from '../components/appProvider'
 
 function TodoForm({forbidenForm}) {
 
 
     const [input, setInput] = useState({
+        estado: "nueva",
+        prioridad: "media",
         nombre: "",
-        estado: "",
-        prioridad: "",
         descripcion: ""
     })
+    const [errors, setErrors] = useState({error:"block"})
 
     const { dispatch } = useAppContext()
 
@@ -20,24 +21,50 @@ function TodoForm({forbidenForm}) {
             ...input,
             [e.target.name]: e.target.value
         })
+        setErrors(validate({...input,  [e.target.name]: e.target.value}))
+    }
+
+    function validate(input){
+        const errors = {}
+        if(input.nombre && input.descripcion){
+            return errors
+        }else return {sendError:"necesitas ingresar titulo y descripción!⚠️"}
     }
 
     async function submit(e) {
         console.log("se ejecuta")
         e.preventDefault()
-        await createTodo(input)
+
+
+        Object.keys(errors).length && setErrors({sendError:"necesitas ingresar titulo y descripción!⚠️"})
+        
+        if(!Object.keys(errors).length){
+            createTodo(input).then(response =>{
+                setInput({
+                    nombre: "",
+                    estado: "nueva",
+                    prioridad: "media",
+                    descripcion: ""
+                })
+            })        
+            dispatch({
+                type: 'ADD_DATA',
+                payload: await refresh()
+            })
+            forbidenForm()
+            setErrors({error:"block"})
+        }
+        
+
+    }
+
+    async function deleteAll(){
+        await deleteTodo(0, true)
         dispatch({
-            type: 'ADD_DATA',
+            type:'ADD_DATA',
             payload: await refresh()
         })
-        setInput({
-            nombre: "",
-            estado: "",
-            prioridad: "",
-            descripcion: ""
-        })
         forbidenForm()
-
     }
 
 
@@ -65,10 +92,10 @@ function TodoForm({forbidenForm}) {
                 <textarea value={input.descripcion} name='descripcion' onChange={handleChange} placeholder="ingrese una corta descripcion" id="" cols="26" rows="6"></textarea>
                 <br />
                 <button onClick={submit}></button>
+                <span>{errors.sendError? errors.sendError: ""}</span>
             </div>
             <div className={Styles.secondContainer}>
-                <button></button>
-
+                <button onClick={deleteAll}></button>
             </div>
         </div>
 
