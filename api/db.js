@@ -1,7 +1,8 @@
+require('dotenv').config()
 const path = require('path')
 const fs = require('fs')
 const { Sequelize } = require('sequelize')
-const sequelize = new Sequelize('postgresql://postgres:dhJGq52nliOBdS1PYiJ9@containers-us-west-9.railway.app:6670/railway',{
+const sequelize = new Sequelize(process.env.SQL_CONNECT,{
     logging:false,
     protocol:'postgres',
     dialect:'postgres',
