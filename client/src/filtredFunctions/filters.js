@@ -1,10 +1,10 @@
 import { getData } from "../hooks/useApi";
 
-const url = 'http://localhost:3001'
+
 
 export const filterByPriority = async (priority)=>{
 
-    const data = await getData(url)
+    const data = await getData()
 
     switch (priority) {
         case 'alta':
@@ -28,7 +28,7 @@ export const filterByPriority = async (priority)=>{
 
 export const filterByState = async (priority)=>{
 
-    const data = await getData(url)
+    const data = await getData()
 
     switch (priority) {
         case 'nueva':
@@ -52,7 +52,7 @@ export const filterByState = async (priority)=>{
 
 export const searchTodo = async (input)=>{
 
-    const data = await getData(url)
+    const data = await getData()
 
     const serchedData = data.filter(todo => todo.nombre.toLowerCase().includes(input.toLowerCase()))
     
