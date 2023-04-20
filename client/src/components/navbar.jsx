@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { filterByPriority, filterByState, searchTodo } from '../filtredFunctions/filters';
 import Styles from '../styles/navBar.module.css'
 import { useAppContext } from './appProvider';
@@ -10,6 +10,7 @@ function NavBar() {
     const { dispatch } = useAppContext()
     const [forbiden, setForbiden] = useState(true)
     const [searchInput, setSearchInput] = useState("")
+    const buttonRef = useRef(null); 
 
     function forbidenForm(){
         setForbiden(!forbiden)
@@ -37,6 +38,12 @@ function NavBar() {
     function handleSearch(e){
         setSearchInput(e.target.value)
     }
+    function handleKeyDown(event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          buttonRef.current.click();
+        }
+      }
 
     async function search (){
         const data = await searchTodo(searchInput)
@@ -67,9 +74,9 @@ function NavBar() {
                 <h1>Todo List</h1>
             </div>
             <div className={Styles.searchContainer}>
-                <button onClick={search}></button>
-                <input value={searchInput} onChange={handleSearch} placeholder='Buscar por titulo' type="text" />
-                <button onClick={forbidenForm}></button>
+                <button ref={buttonRef} onClick={search}></button>
+                <input onKeyDown={handleKeyDown} value={searchInput} onChange={handleSearch} placeholder='Buscar por titulo' type="text" />
+                <button  onClick={forbidenForm}></button>
             </div>
             <div className={forbiden ? Styles.forbiden : Styles.visible}>
                 <TodoForm forbidenForm={forbidenForm}/>
